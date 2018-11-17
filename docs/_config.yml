@@ -3,4 +3,4 @@ plugins:
   - jekyll-remote-theme
   
 # theme: vue-jekyll-theme
-remote_theme: JorisKok/vue-jekyll-theme
+# remote_theme: JorisKok/vue-jekyll-theme
