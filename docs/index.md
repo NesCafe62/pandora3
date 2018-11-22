@@ -20,6 +20,9 @@ meta:
   - name: og:description
     content: Легковесный PHP Framework
 ---
+
+{% include nav.md %}
+
 # Быстрый старт
 
 ## Установка
