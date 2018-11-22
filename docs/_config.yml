@@ -5,3 +5,5 @@
 # theme: vue-jekyll-theme
 # remote_theme: LukasChen/jekyllVue
 # JorisKok/vue-jekyll-theme
+
+theme: jekyll-theme-cayman
