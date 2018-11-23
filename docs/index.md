@@ -19,9 +19,12 @@ meta:
     content: Pandora 3
   - name: og:description
     content: Легковесный PHP Framework
+nav:
+  - page: Header One
+    permalink: #header-one
+  - page: Header Two
+    permalink: #header-two
 ---
-
-{% include nav.md %}
 
 # Быстрый старт
 
