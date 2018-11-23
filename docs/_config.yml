@@ -7,3 +7,10 @@
 # JorisKok/vue-jekyll-theme
 
 theme: jekyll-theme-cayman
+
+nav:
+- page: Header One
+  permalink: #header-one
+
+- page: Header Two
+  permalink: #header-two
