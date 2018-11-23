@@ -1,1 +1,1 @@
-# Pandora3 documentation
+# Pandora 3 documentation
