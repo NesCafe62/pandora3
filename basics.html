@@ -7,7 +7,7 @@
     <meta name="description" content="">
     
     
-    <link rel="preload" href="/pandora3/assets/css/0.styles.47517f9d.css" as="style"><link rel="preload" href="/pandora3/assets/js/app.b7272f46.js" as="script"><link rel="preload" href="/pandora3/assets/js/3.eda2ad1a.js" as="script"><link rel="prefetch" href="/pandora3/assets/js/2.b3db1d9d.js"><link rel="prefetch" href="/pandora3/assets/js/4.0abe498f.js"><link rel="prefetch" href="/pandora3/assets/js/5.e1ef5492.js"><link rel="prefetch" href="/pandora3/assets/js/6.bd2a0338.js">
+    <link rel="preload" href="/pandora3/assets/css/0.styles.47517f9d.css" as="style"><link rel="preload" href="/pandora3/assets/js/app.1550c0e2.js" as="script"><link rel="preload" href="/pandora3/assets/js/3.31c2f76b.js" as="script"><link rel="prefetch" href="/pandora3/assets/js/2.b3db1d9d.js"><link rel="prefetch" href="/pandora3/assets/js/4.0abe498f.js"><link rel="prefetch" href="/pandora3/assets/js/5.e1ef5492.js"><link rel="prefetch" href="/pandora3/assets/js/6.bd2a0338.js">
     <link rel="stylesheet" href="/pandora3/assets/css/0.styles.47517f9d.css">
   </head>
   <body>
@@ -61,24 +61,24 @@
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Hello, world<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code></pre></div><h3 id="макеты"><a href="#макеты" aria-hidden="true" class="header-anchor">#</a> Макеты</h3> <p>Как правило в макете есть блоки, присутствующие на всех страницах (шапка, боковые меню, подвал и т.д.). Поэтому удобнее вынести их в отдельный файл <code>app/Views/Layout/Main.php</code>:</p> <div class="language-php-extras extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;&lt;/head&gt;
-	&lt;body&gt;
-		&lt;header&gt;Header&lt;/header&gt;
-		&lt;nav&gt;Navigation&lt;/nav&gt;
-		&lt;main&gt;&lt;?= $content ?&gt;&lt;/main&gt;
-		&lt;footer&gt;Footer&lt;/footer&gt;		
-	&lt;/body&gt;
-&lt;/html&gt;
+</code></pre></div><h3 id="макеты"><a href="#макеты" aria-hidden="true" class="header-anchor">#</a> Макеты</h3> <p>Как правило в макете есть блоки, присутствующие на всех страницах (шапка, боковые меню, подвал и т.д.). Поэтому удобнее вынести их в отдельный файл <code>app/Views/Layout/Main.php</code>:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">&gt;</span></span>Header<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">&gt;</span></span>Navigation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">&gt;</span></span><span class="token prolog">&lt;?= $content ?&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token punctuation">&gt;</span></span>Footer<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">&gt;</span></span>		
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
 </code></pre></div><p>В остальных представлениях теперь достаточно оставить только уникальную часть:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Hello, world<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-</code></pre></div><p>Можно создать и другие макеты (например для печати), и указать для использования в методе контроллера.</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'Print'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Можно создать и другие макеты (например для печати), и указать для использования в методе контроллера.</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'Print'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre></div><p>Поздравляем вы написали свое первое приложение.</p> <h2 id="модеnи"><a href="#модеnи" aria-hidden="true" class="header-anchor">#</a> Модели</h2> <h2 id="виджеты"><a href="#виджеты" aria-hidden="true" class="header-anchor">#</a> Виджеты</h2> <h2 id="пnагины"><a href="#пnагины" aria-hidden="true" class="header-anchor">#</a> Плагины</h2></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
         ←
         <a href="/pandora3/getting-started.html" class="prev">
           Быстрый старт
         </a></span> <!----></p></div> </div> <!----></div></div>
-    <script src="/pandora3/assets/js/app.b7272f46.js" defer></script><script src="/pandora3/assets/js/3.eda2ad1a.js" defer></script>
+    <script src="/pandora3/assets/js/app.1550c0e2.js" defer></script><script src="/pandora3/assets/js/3.31c2f76b.js" defer></script>
   </body>
 </html>
