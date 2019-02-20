@@ -7,7 +7,7 @@
     <meta name="description" content="">
     
     
-    <link rel="preload" href="/pandora3/assets/css/0.styles.47517f9d.css" as="style"><link rel="preload" href="/pandora3/assets/js/app.e2c14d8b.js" as="script"><link rel="preload" href="/pandora3/assets/js/3.cebc8962.js" as="script"><link rel="prefetch" href="/pandora3/assets/js/2.b3db1d9d.js"><link rel="prefetch" href="/pandora3/assets/js/4.0abe498f.js"><link rel="prefetch" href="/pandora3/assets/js/5.e1ef5492.js"><link rel="prefetch" href="/pandora3/assets/js/6.bd2a0338.js">
+    <link rel="preload" href="/pandora3/assets/css/0.styles.47517f9d.css" as="style"><link rel="preload" href="/pandora3/assets/js/app.743b4060.js" as="script"><link rel="preload" href="/pandora3/assets/js/3.57197867.js" as="script"><link rel="prefetch" href="/pandora3/assets/js/2.b3db1d9d.js"><link rel="prefetch" href="/pandora3/assets/js/4.0abe498f.js"><link rel="prefetch" href="/pandora3/assets/js/5.e1ef5492.js"><link rel="prefetch" href="/pandora3/assets/js/6.bd2a0338.js">
     <link rel="stylesheet" href="/pandora3/assets/css/0.styles.47517f9d.css">
   </head>
   <body>
@@ -54,34 +54,30 @@
 	<span class="token punctuation">}</span>
 	
 <span class="token punctuation">}</span>
-</span></code></pre></div><p>Остальные контроллеры можно создать точно так же.</p> <h2 id="представnения"><a href="#представnения" aria-hidden="true" class="header-anchor">#</a> Представления</h2> <p>По умолчанию представления находятся в каталоге <code>app/Views</code>. Пример представления <code>Home.php</code>:</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ru&quot;&gt;
-	&lt;head&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt;Hello, world&lt;/h1&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div><h3 id="макеты"><a href="#макеты" aria-hidden="true" class="header-anchor">#</a> Макеты</h3> <p>Очень часто в макетах есть общая часть, присутствующая на всех страницах (шапка, боковые меню, подвал и т.д.). Поэтому удобнее вынести их в отдельный файл <code>app/Views/Layout/Main.php</code></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ru&quot;&gt;
-	&lt;head&gt;
-	&lt;/head&gt;
+</span></code></pre></div><p>Остальные контроллеры можно создать точно так же.</p> <h2 id="представnения"><a href="#представnения" aria-hidden="true" class="header-anchor">#</a> Представления</h2> <p>По умолчанию представления находятся в каталоге <code>app/Views</code>. Пример представления <code>Home.php</code>:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Hello, world<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="макеты"><a href="#макеты" aria-hidden="true" class="header-anchor">#</a> Макеты</h3> <p>Очень часто в макетах есть общая часть, присутствующая на всех страницах (шапка, боковые меню, подвал и т.д.). Поэтому удобнее вынести их в отдельный файл <code>app/Views/Layout/Main.php</code></p> <div class="language-php-extras extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;&lt;/head&gt;
 	&lt;body&gt;
 		&lt;header&gt;Header&lt;/header&gt;
 		&lt;nav&gt;Navigation&lt;/nav&gt;
-		&lt;main&gt;
-			&lt;?= $content ?&gt;
-		&lt;/main&gt;
+		&lt;main&gt;&lt;?= $content ?&gt;&lt;/main&gt;
 		&lt;footer&gt;Footer&lt;/footer&gt;		
 	&lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div><p>А в обычных представлениях останется только уникальная часть.</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;h1&gt;Hello, world&lt;/h1&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
+</code></pre></div><p>А в обычных представлениях останется только уникальная часть.</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Hello, world<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
 </code></pre></div><p>Поздравляем вы написали свое первое приложение.</p> <h2 id="модеnи"><a href="#модеnи" aria-hidden="true" class="header-anchor">#</a> Модели</h2> <h2 id="виджеты"><a href="#виджеты" aria-hidden="true" class="header-anchor">#</a> Виджеты</h2> <h2 id="пnагины"><a href="#пnагины" aria-hidden="true" class="header-anchor">#</a> Плагины</h2></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
         ←
         <a href="/pandora3/getting-started.html" class="prev">
           Быстрый старт
         </a></span> <!----></p></div> </div> <!----></div></div>
-    <script src="/pandora3/assets/js/app.e2c14d8b.js" defer></script><script src="/pandora3/assets/js/3.cebc8962.js" defer></script>
+    <script src="/pandora3/assets/js/app.743b4060.js" defer></script><script src="/pandora3/assets/js/3.57197867.js" defer></script>
   </body>
 </html>
